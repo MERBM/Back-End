@@ -34,7 +34,7 @@ jobs:
 
     # Publish the Web API project
     - name: Publish Web API
-      run: dotnet publish api/api.csproj --configuration Release --no-build --output Api/publish
+      run: dotnet publish api/api.csproj --configuration Release --output Api/publish
 
     # Upload the published artifacts
     - name: Upload published Web API
