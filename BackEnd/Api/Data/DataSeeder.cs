@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
 
+
 namespace Api.Data
 {
     public static class DataSeeder
