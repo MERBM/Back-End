@@ -19,6 +19,12 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <Content Include="images\**"> 
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory> 
+    </Content>
   </ItemGroup>
+  <Target Name="CreateAppDataFolder" AfterTargets="AfterPublish">
+  <MakeDir Directories="$(PublishDir)images" Condition="!Exists('$(PublishDir)images')" /> 
+  </Target>
 
 </Project>

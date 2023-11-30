@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K/gnTe6UgJyYiS7tZMYfFtNlz37q4echYKiheID497Sl44XFBRDqQ62uH+fE6Td/Yap8+YrjlaUhg+Ktn4ieeg==",
+  "dgSpecHash": "oAUPZgQ8lBuZMsKxS+eu6yJC897WCc1Xy/XGNmWMppG1nC1naMHrgBLfKybFnFgOlgvW6saImftRi9K8RmR8vg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\kemo\\BackEnd\\api\\Api.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\kemo-Back\\BackEnd\\api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
