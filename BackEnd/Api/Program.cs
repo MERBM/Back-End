@@ -1,7 +1,9 @@
+using System.Text.Json.Serialization;
 using Api;
 using Api.Data;
 using Api.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = new ConfigurationBuilder()
@@ -27,7 +29,12 @@ builder.Services.AddCors(options =>
                .AllowAnyHeader();
     });
 });
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+// .AddJsonOptions(options =>
+// {
+//     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+// })
+;
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 var app = builder.Build();
@@ -38,7 +45,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+ app.UseStaticFiles(); // For wwwroot
 
+    // Assuming "images" is a folder at the root level of your application
+    app.UseStaticFiles(new StaticFileOptions
+    {
+        FileProvider = new PhysicalFileProvider(
+            Path.Combine(app.Environment.ContentRootPath, "images")),
+        RequestPath = "/images"
+    });
+    
 app.UseHttpsRedirection();
 app.UseCors("AllowAnyOrigin");
 

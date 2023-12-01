@@ -39,6 +39,7 @@ public class AccountController : ControllerBase
         {
             return Unauthorized("Invalid credentials.");
         }
+        user.PasswordHash = null;
 
         return Ok(user);
     }

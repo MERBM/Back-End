@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\Desktop\\kemo-Back\\BackEnd\\api\\Api.csproj": {}
+    "X:\\carbets\\back-end\\backend\\api\\Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\Desktop\\kemo-Back\\BackEnd\\api\\Api.csproj": {
+    "X:\\carbets\\back-end\\backend\\api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\kemo-Back\\BackEnd\\api\\Api.csproj",
+        "projectUniqueName": "X:\\carbets\\back-end\\backend\\api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "C:\\Users\\pc\\Desktop\\kemo-Back\\BackEnd\\api\\Api.csproj",
-        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\kemo-Back\\BackEnd\\api\\obj\\",
+        "projectPath": "X:\\carbets\\back-end\\backend\\api\\Api.csproj",
+        "packagesPath": "C:\\Users\\MER\\.nuget\\packages\\",
+        "outputPath": "X:\\carbets\\back-end\\backend\\api\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

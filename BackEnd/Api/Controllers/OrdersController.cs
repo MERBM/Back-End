@@ -19,6 +19,26 @@ public class OrdersController : ControllerBase
         _orderService = orderService;
     }
 
+    [HttpGet]
+    public ActionResult<List<Order>> GetOrders()
+    {
+        var order = _orderService.GetOrders();
+        if (order == null)
+        {
+            return NotFound();
+        }
+        return Ok(order);
+    }
+    [HttpGet("GetOrdersByUserId/{userid}")]
+    public ActionResult<List<Order>> GetOrdersByUserId(int userid)
+    {
+        var order = _orderService.GetOrdersByUserId(userid);
+        if (order == null)
+        {
+            return NotFound();
+        }
+        return Ok(order);
+    }
     [HttpGet("{id}")]
     public ActionResult<Order> GetOrder(int id)
     {
@@ -31,7 +51,7 @@ public class OrdersController : ControllerBase
     }
 
     [HttpPost]
-    public ActionResult PlaceOrder(Order order)
+    public ActionResult PlaceOrder(Orderdto order)
     {
         _orderService.PlaceOrder(order);
         return Ok();
@@ -53,6 +73,21 @@ public class OrdersController : ControllerBase
         return NoContent();
     }
 
+      [HttpDelete("delete/{userId}/{orderId}")]
+    public IActionResult DeleteOrder(int userId, int orderId)
+    {
+       
+            bool isDeleted = _orderService.DeleteOrderForUser(userId, orderId);
+            if (isDeleted)
+            {
+                return Ok(new { message = "Order deleted successfully." });
+            }
+            else
+            {
+                return BadRequest(new { message = "Order cannot be deleted. It may be older than 3 hours or does not exist." });
+            }
+       
+    }
     // Delete an order
     [HttpDelete("{id}")]
     public IActionResult DeleteOrder(int id)

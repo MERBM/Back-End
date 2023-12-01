@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Api.Data
@@ -60,6 +61,7 @@ namespace Api.Data
         public decimal PriceAtOrder { get; set; }
 
         // Navigation properties
+            [JsonIgnore]
         public Order Order { get; set; }
         public Product Product { get; set; }
     }
