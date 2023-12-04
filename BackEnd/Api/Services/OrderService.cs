@@ -42,7 +42,7 @@ namespace Api.Services
         {
             Order order = new Order();
             order.UserID = newOrder.UserID;
-            order.OrderDate = DateTime.Now;
+            order.OrderDate = DateTime.UtcNow;
             order.User = _context.users.FirstOrDefault(u => u.UserID == newOrder.UserID);
             order.DeliveryAddress = newOrder.DeliveryAddress;
             order.PhoneNumber = newOrder.PhoneNumber;
